@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #ccc;
+}

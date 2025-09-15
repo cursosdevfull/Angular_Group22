@@ -1,0 +1,16 @@
+<div class="container">
+    @for(member of members; track member.id) {
+    <div class="content">
+        <div class="column">
+            @let general = {name: member.name, age: member.age, location: member.location, occupation: member.location};
+            <cdev-staff-general [data]="general"></cdev-staff-general>
+        </div>
+        <div class="column">
+            <cdev-staff-hobbies [data]="member.hobbies"></cdev-staff-hobbies>
+        </div>
+        <div class="column">
+            <cdev-staff-family [data]="member.family"></cdev-staff-family>
+        </div>
+    </div>
+    }
+</div>
