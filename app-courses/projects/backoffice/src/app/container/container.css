@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-color: yellow;
+}
+
+.container {
+  display: flex;
+  justify-content: end;
+  background-image: url('/assets/images/main.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
