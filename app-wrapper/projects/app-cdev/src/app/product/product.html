@@ -1,0 +1,7 @@
+<p>{{info.name}}</p>
+<p>{{info.price}}</p>
+@if(info.stock > 0) {
+<span style="font-weight: bold;">In Stock ({{info.stock}})</span>
+} @else {
+<p style="font-weight: bold; color: red">Out of Stock</p>
+}

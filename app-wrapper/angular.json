@@ -1,0 +1,111 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "appCDev": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/app-cdev",
+      "sourceRoot": "projects/app-cdev/src",
+      "prefix": "cdev",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "projects/app-cdev/src/main.ts",
+            "tsConfig": "projects/app-cdev/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/app-cdev/public"
+              }
+            ],
+            "styles": [
+              "projects/app-cdev/src/styles.css"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "appCDev:build:production"
+            },
+            "development": {
+              "buildTarget": "appCDev:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular/build:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/app-cdev/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/app-cdev/public"
+              }
+            ],
+            "styles": [
+              "projects/app-cdev/src/styles.css"
+            ]
+          }
+        }
+      }
+    },
+    "appCDevLib": {
+      "projectType": "library",
+      "root": "projects/app-cdev-lib",
+      "sourceRoot": "projects/app-cdev-lib/src",
+      "prefix": "cdev-lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/app-cdev-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/app-cdev-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/app-cdev-lib/tsconfig.spec.json"
+          }
+        }
+      }
+    }
+  }
+}

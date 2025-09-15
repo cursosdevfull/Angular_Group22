@@ -1,0 +1,551 @@
+[
+    {
+        "id": 1,
+        "name": "Julio César",
+        "age": 45,
+        "occupation": "General",
+        "location": "Rome",
+        "hobbies": [
+            "Reading",
+            "Traveling",
+            "Cooking"
+        ],
+        "family": [
+            {
+                "relation": "Spouse",
+                "name": "Calpurnia",
+                "age": 40
+            },
+            {
+                "relation": "Son",
+                "name": "Augustus",
+                "age": 18
+            },
+            {
+                "relation": "Daughter",
+                "name": "Julia",
+                "age": 16
+            },
+            {
+                "relation": "Pet",
+                "name": "Brutus",
+                "age": 5
+            },
+            {
+                "relation": "Sister-in-law",
+                "name": "Octavia",
+                "age": 42
+            },
+            {
+                "relation": "Brother",
+                "name": "Tiberius",
+                "age": 50
+            },
+            {
+                "relation": "Cousin",
+                "name": "Lucius",
+                "age": 30
+            },
+            {
+                "relation": "Aunt",
+                "name": "Livia",
+                "age": 45
+            },
+            {
+                "relation": "Uncle",
+                "name": "Marcus",
+                "age": 48
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "María Elena García",
+        "age": 32,
+        "occupation": "Doctora",
+        "location": "Madrid",
+        "hobbies": [
+            "Lectura",
+            "Yoga",
+            "Fotografía"
+        ],
+        "family": [
+            {
+                "relation": "Spouse",
+                "name": "Carlos Mendoza",
+                "age": 35
+            },
+            {
+                "relation": "Daughter",
+                "name": "Sofía",
+                "age": 8
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Roberto Silva",
+        "age": 28,
+        "occupation": "Ingeniero de Software",
+        "location": "Buenos Aires",
+        "hobbies": [
+            "Programación",
+            "Gaming",
+            "Fútbol"
+        ],
+        "family": [
+            {
+                "relation": "Mother",
+                "name": "Carmen Silva",
+                "age": 55
+            },
+            {
+                "relation": "Father",
+                "name": "Juan Silva",
+                "age": 58
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Ana Lucía Morales",
+        "age": 41,
+        "occupation": "Arquitecta",
+        "location": "Bogotá",
+        "hobbies": [
+            "Diseño",
+            "Pintura",
+            "Senderismo"
+        ],
+        "family": [
+            {
+                "relation": "Son",
+                "name": "Diego",
+                "age": 15
+            },
+            {
+                "relation": "Son",
+                "name": "Mateo",
+                "age": 12
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Luis Fernando Castro",
+        "age": 39,
+        "occupation": "Chef",
+        "location": "Lima",
+        "hobbies": [
+            "Cocina",
+            "Música",
+            "Natación"
+        ],
+        "family": [
+            {
+                "relation": "Spouse",
+                "name": "Patricia Ruiz",
+                "age": 36
+            },
+            {
+                "relation": "Daughter",
+                "name": "Isabella",
+                "age": 10
+            },
+            {
+                "relation": "Son",
+                "name": "Sebastián",
+                "age": 7
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Carmen Rosa Vega",
+        "age": 52,
+        "occupation": "Profesora",
+        "location": "Caracas",
+        "hobbies": [
+            "Jardinería",
+            "Escritura",
+            "Teatro"
+        ],
+        "family": [
+            {
+                "relation": "Daughter",
+                "name": "Valentina",
+                "age": 22
+            },
+            {
+                "relation": "Son",
+                "name": "Andrés",
+                "age": 19
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Francisco Javier López",
+        "age": 47,
+        "occupation": "Abogado",
+        "location": "México DF",
+        "hobbies": [
+            "Historia",
+            "Ajedrez",
+            "Ciclismo"
+        ],
+        "family": [
+            {
+                "relation": "Spouse",
+                "name": "Laura Jiménez",
+                "age": 44
+            },
+            {
+                "relation": "Son",
+                "name": "Emilio",
+                "age": 17
+            },
+            {
+                "relation": "Daughter",
+                "name": "Camila",
+                "age": 14
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Isabella Martínez",
+        "age": 26,
+        "occupation": "Diseñadora Gráfica",
+        "location": "Santiago",
+        "hobbies": [
+            "Arte Digital",
+            "Baile",
+            "Viajes"
+        ],
+        "family": [
+            {
+                "relation": "Boyfriend",
+                "name": "Miguel Torres",
+                "age": 29
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Pedro Antonio Herrera",
+        "age": 34,
+        "occupation": "Médico",
+        "location": "Quito",
+        "hobbies": [
+            "Medicina",
+            "Montañismo",
+            "Lectura"
+        ],
+        "family": [
+            {
+                "relation": "Spouse",
+                "name": "Mónica Paz",
+                "age": 31
+            },
+            {
+                "relation": "Son",
+                "name": "Gabriel",
+                "age": 5
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Sofía Alejandra Ramos",
+        "age": 29,
+        "occupation": "Periodista",
+        "location": "Montevideo",
+        "hobbies": [
+            "Escritura",
+            "Investigación",
+            "Cine"
+        ],
+        "family": [
+            {
+                "relation": "Sister",
+                "name": "Daniela Ramos",
+                "age": 25
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Daniel Eduardo Sánchez",
+        "age": 43,
+        "occupation": "Contador",
+        "location": "Guatemala",
+        "hobbies": [
+            "Finanzas",
+            "Golf",
+            "Lectura"
+        ],
+        "family": [
+            {
+                "relation": "Spouse",
+                "name": "Rosa María",
+                "age": 40
+            },
+            {
+                "relation": "Son",
+                "name": "David",
+                "age": 16
+            },
+            {
+                "relation": "Daughter",
+                "name": "Andrea",
+                "age": 13
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Valentina Rosales",
+        "age": 37,
+        "occupation": "Psicóloga",
+        "location": "San José",
+        "hobbies": [
+            "Terapia",
+            "Meditación",
+            "Plantas"
+        ],
+        "family": [
+            {
+                "relation": "Husband",
+                "name": "José Luis",
+                "age": 39
+            },
+            {
+                "relation": "Daughter",
+                "name": "Emma",
+                "age": 11
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Alejandro Restrepo",
+        "age": 31,
+        "occupation": "Músico",
+        "location": "Medellín",
+        "hobbies": [
+            "Guitarra",
+            "Composición",
+            "Conciertos"
+        ],
+        "family": [
+            {
+                "relation": "Mother",
+                "name": "Gloria Restrepo",
+                "age": 56
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Claudia Patricia Vargas",
+        "age": 48,
+        "occupation": "Enfermera",
+        "location": "Panamá",
+        "hobbies": [
+            "Cuidado de la salud",
+            "Cocina",
+            "Voluntariado"
+        ],
+        "family": [
+            {
+                "relation": "Son",
+                "name": "Carlos Andrés",
+                "age": 20
+            },
+            {
+                "relation": "Daughter",
+                "name": "María José",
+                "age": 18
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Ricardo Mendoza",
+        "age": 35,
+        "occupation": "Piloto",
+        "location": "San Salvador",
+        "hobbies": [
+            "Aviación",
+            "Deportes extremos",
+            "Fotografía"
+        ],
+        "family": [
+            {
+                "relation": "Wife",
+                "name": "Karla Flores",
+                "age": 32
+            },
+            {
+                "relation": "Son",
+                "name": "Ricardo Jr.",
+                "age": 6
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Natalia Fernández",
+        "age": 27,
+        "occupation": "Veterinaria",
+        "location": "Tegucigalpa",
+        "hobbies": [
+            "Cuidado animal",
+            "Naturaleza",
+            "Fotografía de fauna"
+        ],
+        "family": [
+            {
+                "relation": "Father",
+                "name": "Roberto Fernández",
+                "age": 54
+            },
+            {
+                "relation": "Mother",
+                "name": "Ana Lucía",
+                "age": 51
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Andrés Felipe Cortés",
+        "age": 33,
+        "occupation": "Arquitecto",
+        "location": "Cali",
+        "hobbies": [
+            "Diseño",
+            "Urbanismo",
+            "Arte"
+        ],
+        "family": [
+            {
+                "relation": "Spouse",
+                "name": "Lucía Moreno",
+                "age": 30
+            },
+            {
+                "relation": "Daughter",
+                "name": "Martina",
+                "age": 4
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Gabriela Torres",
+        "age": 42,
+        "occupation": "Farmacéutica",
+        "location": "La Paz",
+        "hobbies": [
+            "Química",
+            "Investigación",
+            "Lectura científica"
+        ],
+        "family": [
+            {
+                "relation": "Son",
+                "name": "Joaquín",
+                "age": 14
+            },
+            {
+                "relation": "Daughter",
+                "name": "Valeria",
+                "age": 11
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Miguel Ángel Rojas",
+        "age": 29,
+        "occupation": "Programador",
+        "location": "Asunción",
+        "hobbies": [
+            "Desarrollo web",
+            "Inteligencia artificial",
+            "Videojuegos"
+        ],
+        "family": [
+            {
+                "relation": "Girlfriend",
+                "name": "Carla Benítez",
+                "age": 26
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Lucía Esperanza Delgado",
+        "age": 38,
+        "occupation": "Ingeniera Civil",
+        "location": "Managua",
+        "hobbies": [
+            "Construcción",
+            "Sostenibilidad",
+            "Deportes acuáticos"
+        ],
+        "family": [
+            {
+                "relation": "Husband",
+                "name": "Fernando Aguilar",
+                "age": 41
+            },
+            {
+                "relation": "Son",
+                "name": "Alejandro",
+                "age": 9
+            },
+            {
+                "relation": "Daughter",
+                "name": "Fernanda",
+                "age": 6
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Esteban Morales",
+        "age": 46,
+        "occupation": "Consultor",
+        "location": "Santo Domingo",
+        "hobbies": [
+            "Negocios",
+            "Tenis",
+            "Vinos"
+        ],
+        "family": [
+            {
+                "relation": "Wife",
+                "name": "Mercedes López",
+                "age": 43
+            },
+            {
+                "relation": "Son",
+                "name": "Esteban Jr.",
+                "age": 21
+            },
+            {
+                "relation": "Son",
+                "name": "Rafael",
+                "age": 19
+            },
+            {
+                "relation": "Daughter",
+                "name": "Isabela",
+                "age": 17
+            }
+        ]
+    }
+]
