@@ -1,0 +1,7 @@
+mat-card {
+  margin: 20px;
+  padding: 20px;
+  height: calc(
+    100vh - 64px - 87px - 40px
+  ); /* 100vh - Header(64px) - Title(80px) - Márgenes verticales(40px) */
+}

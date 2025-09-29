@@ -22,6 +22,7 @@
               }
             ],
             "styles": [
+              "projects/backoffice/src/custom-theme.scss",
               "projects/backoffice/src/styles.css"
             ]
           },

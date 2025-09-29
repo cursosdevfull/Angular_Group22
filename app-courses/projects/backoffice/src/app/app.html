@@ -1,1 +1,11 @@
-<bo-container></bo-container>
+<mat-sidenav-container hasBackdrop="false">
+    @if(layout.showMenu) {
+    <mat-sidenav mode="side" opened="true" disableClose="true">Prueba</mat-sidenav>
+    }
+    <mat-sidenav-content>
+        @if(layout.showHeader) {
+        <bo-header></bo-header>
+        }
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

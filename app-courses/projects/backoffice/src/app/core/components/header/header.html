@@ -1,0 +1,44 @@
+<mat-toolbar class="header-toolbar">
+    <div class="header-left">
+        <div class="brand-section">
+            <mat-icon class="brand-icon">school</mat-icon>
+            <h1 class="brand-title">Courses Management</h1>
+        </div>
+    </div>
+
+    <div class="header-right">
+        <div class="user-profile">
+            <div class="user-avatar">
+                <img src="/assets/images/user.png" alt="User Avatar">
+            </div>
+            <div class="user-info">
+                <span class="username">John Doe</span>
+                <span class="user-role">Administrator</span>
+            </div>
+            <button mat-icon-button class="dropdown-button" aria-label="User menu" [matMenuTriggerFor]="menu">
+                <mat-icon>expand_more</mat-icon>
+            </button>
+        </div>
+    </div>
+</mat-toolbar>
+<mat-menu #menu="matMenu" class="user-menu">
+    <div class="menu-header">
+        <div class="menu-user-avatar">
+            <img src="/assets/images/user.png" alt="User Avatar">
+        </div>
+        <div class="menu-user-info">
+            <span class="menu-username">John Doe</span>
+            <span class="menu-user-email">john.doe@example.com</span>
+        </div>
+    </div>
+
+    <button mat-menu-item class="menu-item">
+        <mat-icon class="menu-icon">lock_clock</mat-icon>
+        <span class="menu-text">Lock Session</span>
+    </button>
+
+    <button mat-menu-item class="menu-item danger">
+        <mat-icon class="menu-icon">logout</mat-icon>
+        <span class="menu-text">Sign Out</span>
+    </button>
+</mat-menu>

@@ -9,6 +9,5 @@
   display: flex;
   justify-content: end;
   background-image: url('/assets/images/main.jpg');
-  background-repeat: no-repeat;
   background-size: contain;
 }
