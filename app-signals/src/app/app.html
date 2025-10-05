@@ -1,0 +1,16 @@
+<p>{{counter()}}</p>
+
+<button (click)="getRandom()">Get Random Number</button>
+<button (click)="increment()">Increment</button>
+
+<hr>
+<p>Price: {{price().toFixed(2)}}</p>
+<p>Tax: {{tax().toFixed(2)}}</p>
+<p>Total: {{total()}}</p>
+
+<button (click)="updatePrice()">Increase Price</button>
+<button (click)="updateTax()">Increase Tax</button>
+<button (click)="toggleCurrency()">Toggle Currency</button>
+
+<hr>
+<button (click)="fetchUser()">Fetch User</button>
