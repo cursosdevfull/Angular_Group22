@@ -12,8 +12,6 @@ import { Menu } from './core/components/menu/menu';
   styleUrl: './app.css'
 })
 export class App {
-  isSidenavOpened = false
-
   constructor(public layout: Layout) { }
 
 }

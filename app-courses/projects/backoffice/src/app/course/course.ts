@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Layout } from '../core/services/layout';
 import { Title } from '../core/components/title/title';
 import { Container } from '../core/components/container/container';
+import { CourseService } from './course-service';
 
 @Component({
   selector: 'bo-course',
@@ -10,8 +11,10 @@ import { Container } from '../core/components/container/container';
   styleUrl: './course.css'
 })
 export class Course {
+  courseService = inject(CourseService)
+
   constructor(private layout: Layout) {
-    this.layout.showMenu = true
-    this.layout.showHeader = true
+    this.layout.showMenu.set(true)
+    this.layout.showHeader.set(true)
   }
 }

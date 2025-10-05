@@ -4,19 +4,16 @@
     <p>List of courses will be displayed here.</p>
     <table>
         <tr>
-            <th>Course Name</th>
-            <th>Instructor</th>
-            <th>Duration</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Category</th>
         </tr>
+        @for(course of courseService.courses(); track course.id) {
         <tr>
-            <td>Angular Basics</td>
-            <td>John Doe</td>
-            <td>4 weeks</td>
+            <td>{{course.id}}</td>
+            <td>{{course.name}}</td>
+            <td>{{course.category}}</td>
         </tr>
-        <tr>
-            <td>Advanced Angular</td>
-            <td>Jane Smith</td>
-            <td>6 weeks</td>
-        </tr>
+        }
     </table>
 </bo-container>

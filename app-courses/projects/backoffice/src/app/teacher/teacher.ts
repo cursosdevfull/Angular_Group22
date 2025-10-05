@@ -11,7 +11,7 @@ import { Layout } from '../core/services/layout';
 })
 export class Teacher {
   constructor(private layout: Layout) {
-    this.layout.showMenu = true
-    this.layout.showHeader = true
+    this.layout.showMenu.set(true)
+    this.layout.showHeader.set(true)
   }
 }

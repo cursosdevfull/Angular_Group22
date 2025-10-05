@@ -14,8 +14,8 @@ export class Login {
   domainsAllowed = ["company.com", "pe.company.com", "cl.company.com"];
 
   constructor(private router: Router, private layout: Layout) {
-    this.layout.showMenu = false
-    this.layout.showHeader = false
+    this.layout.showMenu.set(false)
+    this.layout.showHeader.set(false)
 
     this.fg = new FormGroup({
       email: new FormControl(null, [Validators.required, this.validatorEmail, this.validatorGenericDomain(this.domainsAllowed) /* this.validatorEmailCompany */]),

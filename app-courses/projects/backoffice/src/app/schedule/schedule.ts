@@ -11,7 +11,7 @@ import { Container } from '../core/components/container/container';
 })
 export class Schedule {
   constructor(private layout: Layout) {
-    this.layout.showMenu = true
-    this.layout.showHeader = true
+    this.layout.showMenu.set(true);
+    this.layout.showHeader.set(true);
   }
 }

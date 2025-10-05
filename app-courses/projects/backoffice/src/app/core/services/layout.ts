@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class Layout {
-  showMenu = true
-  showHeader = true
+  showMenu = signal<boolean>(true);
+  showHeader = signal<boolean>(true);
 }

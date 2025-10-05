@@ -1,11 +1,11 @@
 <mat-sidenav-container hasBackdrop="false">
-    @if(layout.showMenu) {
+    @if(layout.showMenu()) {
     <mat-sidenav mode="side" opened="true" disableClose="true">
         <bo-menu></bo-menu>
     </mat-sidenav>
     }
     <mat-sidenav-content>
-        @if(layout.showHeader) {
+        @if(layout.showHeader()) {
         <bo-header></bo-header>
         }
         <router-outlet></router-outlet>
