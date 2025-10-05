@@ -1,6 +1,8 @@
 <mat-sidenav-container hasBackdrop="false">
     @if(layout.showMenu) {
-    <mat-sidenav mode="side" opened="true" disableClose="true">Prueba</mat-sidenav>
+    <mat-sidenav mode="side" opened="true" disableClose="true">
+        <bo-menu></bo-menu>
+    </mat-sidenav>
     }
     <mat-sidenav-content>
         @if(layout.showHeader) {

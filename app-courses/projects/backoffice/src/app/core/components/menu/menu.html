@@ -1,0 +1,16 @@
+<div class="logo">
+    <mat-icon>school</mat-icon>
+    <h2>Courses Management</h2>
+</div>
+
+<mat-nav-list>
+    @for (itemMenu of listItemMenu; track itemMenu) {
+    <a mat-list-item routerLink="{{itemMenu.link}}" routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }">
+        <div class="item-menu">
+            <mat-icon>{{ itemMenu.icon }}</mat-icon>
+            <span>{{ itemMenu.label }}</span>
+        </div>
+    </a>
+    }
+</mat-nav-list>

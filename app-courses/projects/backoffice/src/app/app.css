@@ -5,6 +5,19 @@ mat-sidenav {
 }
 
 mat-sidenav {
-  background-color: aquamarine;
   width: 250px;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Ensure sidenav container is also rectangular */
+mat-sidenav-container {
+  border-radius: 0 !important;
+}
+
+/* Remove any default Material Design rounded corners */
+mat-sidenav .mat-drawer-inner-container {
+  border-radius: 0 !important;
 }
