@@ -1,0 +1,12 @@
+:host {
+  height: 90%;
+}
+
+.header {
+  font-weight: bold;
+}
+
+.row:hover {
+  background-color: #bac5f5;
+  cursor: pointer;
+}
