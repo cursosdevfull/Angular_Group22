@@ -1,0 +1,22 @@
+<p>{{paragraph | reduce:30:" ...see more "}}</p>
+<hr>
+<p>Price: {{price | number:'1.1-3'}}</p>
+<p>Quantity: {{quantity | number:'1.0-0'}}</p>
+<p>Total: {{total | currency:'PEN':"S/.":"1.4-4"}}</p>
+<hr>
+<p>Current Date: {{currentDate | date:"dd-MMM, yyyy"}}</p>
+<hr>
+<pre>{{info | json}}</pre>
+<hr>
+<p>Percentage: {{percentAdvanced | percent:'1.2-2'}}</p>
+<hr>
+<p>Lowercase: {{receipt | lowercase}}</p>
+<p>Uppercase: {{receipt | uppercase}}</p>
+<hr>
+<p>Titlecase: {{course | titlecase}}</p>
+<hr>
+<p>Course List (first 3): {{courseList | slice:0:3}}</p>
+<p>Course List (from 3rd to end): {{courseList | slice:2}}</p>
+<p>Course List (last 2): {{courseList | slice:-2}}</p>
+<hr>
+<p>Total Enrolled: {{totalEnrolled | async}}</p>
