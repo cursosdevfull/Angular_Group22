@@ -15,7 +15,7 @@ phases:
   post_build:
     commands:
       - aws s3 rm s3://cursosdev-angular22 --recursive
-      - aws s3 sync app-courses/dist/backoffice/browser s3://cursosdev-angular22 --delete
+      - aws s3 sync dist/backoffice/browser s3://cursosdev-angular22 --delete
       - aws cloudfront create-invalidation --distribution-id E2M46UOI2NU76W --paths "/*"
 artifacts:
   name: "Curso22"
