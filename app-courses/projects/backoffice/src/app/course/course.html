@@ -1,19 +1,30 @@
-<bo-title title="Course" icon="book"></bo-title>
+<bo-title title="Courses" icon="book">
+    <button mat-flat-button color="primary" (click)="openForm()">
+        <mat-icon>add</mat-icon>
+        Add
+    </button>
+</bo-title>
 <bo-container>
-    <h2>Courses' List</h2>
-    <p>List of courses will be displayed here.</p>
-    <table>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Category</th>
-        </tr>
-        @for(course of courseService.courses(); track course.id) {
-        <tr>
-            <td>{{course.id}}</td>
-            <td>{{course.name}}</td>
-            <td>{{course.category}}</td>
-        </tr>
-        }
-    </table>
+    <bo-table [dataSource]="dataSource()" [metadata]="metadata">
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let row" class="align_right">
+                <button mat-icon-button color="primary" aria-label="Edit"
+                    (click)="$event.stopPropagation();openForm(row)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="warn" aria-label="Delete" (click)="$event.stopPropagation();delete(row)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+    </bo-table>
+    <div class="footer">
+        <bo-export [dataSource]="dataSource()" [dataSourceOriginal]="dataSourceOriginal()"
+            [metadata]="metadata"></bo-export>
+        <bo-paginator (onPage)="onPageChanged($event)" [length]="courseService.length"></bo-paginator>
+    </div>
 </bo-container>
+@if(courseService.statusLoading) {
+<bo-loader></bo-loader>
+}

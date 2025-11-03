@@ -1,22 +1,65 @@
-import { Injectable, signal } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { CourseType } from './course-type';
+import { BaseService } from '../core/services/base';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CourseService {
-  courses = signal([
-    { id: 1, name: 'Angular', category: 'Frontend' },
-    { id: 2, name: 'React', category: 'Frontend' },
-    { id: 3, name: 'Vue', category: 'Frontend' },
-    { id: 4, name: 'Node', category: 'Backend' },
-    { id: 5, name: 'Django', category: 'Backend' },
-    { id: 6, name: 'Flask', category: 'Backend' },
-    { id: 7, name: 'Spring', category: 'Backend' },
-    { id: 8, name: 'Laravel', category: 'Backend' },
-    { id: 9, name: 'Ruby on Rails', category: 'Backend' },
-    { id: 10, name: 'ASP.NET', category: 'Backend' },
-  ])
-
-  obs = new Observable()
+export class CourseService extends BaseService<CourseType> {
+  readonly dataSourceOriginal: CourseType[] = [
+    { id: 1, name: "Math 101" },
+    { id: 2, name: "History 201" },
+    { id: 3, name: "Science 301" },
+    { id: 4, name: "Art 101" },
+    { id: 5, name: "Physics 101" },
+    { id: 6, name: "Chemistry 201" },
+    { id: 7, name: "Biology 301" },
+    { id: 8, name: "English 101" },
+    { id: 9, name: "Philosophy 201" },
+    { id: 10, name: "Psychology 101" },
+    { id: 11, name: "Computer Science 301" },
+    { id: 12, name: "Statistics 201" },
+    { id: 13, name: "Calculus 301" },
+    { id: 14, name: "Literature 101" },
+    { id: 15, name: "Economics 201" },
+    { id: 16, name: "Sociology 101" },
+    { id: 17, name: "Anthropology 201" },
+    { id: 18, name: "Political Science 301" },
+    { id: 19, name: "Geography 101" },
+    { id: 20, name: "Music Theory 201" },
+    { id: 21, name: "Art History 301" },
+    { id: 22, name: "Theatre 101" },
+    { id: 23, name: "Film Studies 201" },
+    { id: 24, name: "Photography 101" },
+    { id: 25, name: "Architecture 301" },
+    { id: 26, name: "Engineering 201" },
+    { id: 27, name: "Business 101" },
+    { id: 28, name: "Marketing 201" },
+    { id: 29, name: "Finance 301" },
+    { id: 30, name: "Accounting 101" },
+    { id: 31, name: "Law 201" },
+    { id: 32, name: "Medicine 301" },
+    { id: 33, name: "Nursing 101" },
+    { id: 34, name: "Dentistry 201" },
+    { id: 35, name: "Pharmacy 301" },
+    { id: 36, name: "Veterinary 101" },
+    { id: 37, name: "Agriculture 201" },
+    { id: 38, name: "Environmental Science 301" },
+    { id: 39, name: "Geology 101" },
+    { id: 40, name: "Astronomy 201" },
+    { id: 41, name: "Meteorology 301" },
+    { id: 42, name: "Oceanography 101" },
+    { id: 43, name: "Robotics 201" },
+    { id: 44, name: "Data Science 301" },
+    { id: 45, name: "Cybersecurity 101" },
+    { id: 46, name: "Game Development 201" },
+    { id: 47, name: "Web Design 301" },
+    { id: 48, name: "Mobile Development 101" },
+    { id: 49, name: "Machine Learning 201" },
+    { id: 50, name: "Artificial Intelligence 301" },
+    { id: 51, name: "Blockchain 101" },
+    { id: 52, name: "Cloud Computing 201" },
+    { id: 53, name: "Network Security 301" },
+    { id: 54, name: "Digital Marketing 101" }
+  ];
 }

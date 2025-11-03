@@ -15,5 +15,6 @@ export class Menu {
     { label: 'Courses', link: '/course', icon: "book" },
     { label: 'Schedules', link: '/schedule', icon: "schedule" },
     { label: 'Teachers', link: '/teacher', icon: "school" },
+    { label: 'Users', link: '/user', icon: "face" },
   ]
 }

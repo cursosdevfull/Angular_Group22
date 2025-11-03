@@ -59,16 +59,6 @@
                     {{fg.get("email")?.errors?.["emailNotAllowed"]}}
                 </div>
                 }
-
-
-                <!--                 @if(fg.get("email")?.valid === false && fg.get("email")?.touched === true) {
-                @if(fg.get("email")?.errors?.["required"]===true) {
-                <span class="error">Email is required</span>
-                } @else {
-                <span class="error">Email format is invalid</span>
-                }
-
-                } -->
             </div>
 
             <div class="form-group">
@@ -108,57 +98,6 @@
                 </div>
                 }
             </div>
-
-            <!--             <div class="form-group">
-                <label for="confirmPassword" class="form-label">
-                    <svg class="label-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                        <circle cx="12" cy="16" r="1"></circle>
-                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                    </svg>
-                    Confirm Password
-                </label>
-                <div class="input-wrapper">
-                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-input"
-                        placeholder="Confirm your password" formControlName="confirmPassword">
-                </div>
-                @if(fg.get("confirmPassword")?.hasError("required") && fg.get("confirmPassword")?.touched) {
-                <div class="error-message">
-                    <svg class="error-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="15" y1="9" x2="9" y2="15"></line>
-                        <line x1="9" y1="9" x2="15" y2="15"></line>
-                    </svg>
-                    Password is required
-                </div>
-                }
-                @if(fg.get("confirmPassword")?.hasError("passwordInvalid") && fg.get("confirmPassword")?.touched) {
-                <div class="error-message">
-                    <svg class="error-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="15" y1="9" x2="9" y2="15"></line>
-                        <line x1="9" y1="9" x2="15" y2="15"></line>
-                    </svg>
-                    Password must be at least 4 characters long and contain only letters and numbers
-                </div>
-                }
-            </div>
-
-            @if(fg.hasError("passwordMismatch") && (fg.get("confirmPassword")?.touched || fg.get("password")?.touched))
-            {
-            <div class="global-error">
-                <svg class="error-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="15" y1="9" x2="9" y2="15"></line>
-                    <line x1="9" y1="9" x2="15" y2="15"></line>
-                </svg>
-                {{fg.errors?.["passwordMismatch"]}}
-            </div>
-            } -->
 
             <button class="submit-button" (click)="save()" [disabled]="fg.invalid" type="button">
                 <span class="button-text">Sign In</span>

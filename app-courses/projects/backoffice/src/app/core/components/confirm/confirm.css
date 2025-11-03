@@ -1,0 +1,10 @@
+mat-dialog-actions {
+  display: flex;
+  justify-content: center;
+}
+
+p[mat-dialog-title] {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px 0;
+}

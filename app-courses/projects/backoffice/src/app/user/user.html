@@ -1,0 +1,30 @@
+<bo-title title="Users" icon="school">
+    <button mat-flat-button color="primary" (click)="openForm()">
+        <mat-icon>add</mat-icon>
+        Add
+    </button>
+</bo-title>
+<bo-container>
+    <bo-table [dataSource]="dataSource()" [metadata]="metadata">
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let row" class="align_right">
+                <button mat-icon-button color="primary" aria-label="Edit"
+                    (click)="$event.stopPropagation();openForm(row)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="warn" aria-label="Delete" (click)="$event.stopPropagation();delete(row)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+    </bo-table>
+    <div class="footer">
+        <bo-export [dataSource]="dataSource()" [dataSourceOriginal]="dataSourceOriginal()"
+            [metadata]="metadata"></bo-export>
+        <bo-paginator (onPage)="onPageChanged($event)" [length]="userService.length"></bo-paginator>
+    </div>
+</bo-container>
+@if(userService.statusLoading) {
+<bo-loader></bo-loader>
+}

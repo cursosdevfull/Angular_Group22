@@ -1,0 +1,30 @@
+<mat-dialog-content>
+    <mat-toolbar>
+        <h2>{{title}}</h2>
+        <button mat-icon-button mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-toolbar>
+    <form [formGroup]="fg">
+        <div class="row">
+            <div class="column">
+                <mat-form-field appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input matInput formControlName="username" required cdkFocusInitial>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Role</mat-label>
+                    <input matInput formControlName="role" required>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+    <mat-dialog-actions>
+        <button mat-flat-button color="primary" type="button" (click)="save()" [disabled]="fg.invalid">Save</button>
+        <button mat-button mat-dialog-close>Cancel</button>
+    </mat-dialog-actions>
+</mat-dialog-content>

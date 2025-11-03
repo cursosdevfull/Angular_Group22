@@ -1,0 +1,39 @@
+.schedule-dialog {
+  width: 800px;
+}
+
+mat-toolbar {
+  border-bottom: 1px solid #747171;
+  display: flex;
+  justify-content: space-between;
+}
+
+form {
+  padding: 10px 20px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+form div.row {
+  display: flex;
+  gap: 16px;
+}
+
+form div.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  border-top: 1px solid #747171 !important;
+}
+
+mat-dialog-content {
+  padding: 0 !important;
+}

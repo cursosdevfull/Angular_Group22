@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ReactiveFormsModule, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Layout } from '../../core/services/layout';
+import { Utils } from '../../core/services/utils';
+import { AuthService } from '../../core/services/auth';
 
 @Component({
   selector: 'bo-login',
@@ -10,6 +12,9 @@ import { Layout } from '../../core/services/layout';
   styleUrl: './login.css'
 })
 export class Login {
+  utilsService = inject(Utils)
+  authService = inject(AuthService)
+
   fg: FormGroup
   domainsAllowed = ["company.com", "pe.company.com", "cl.company.com"];
 
@@ -18,22 +23,23 @@ export class Login {
     this.layout.showHeader.set(false)
 
     this.fg = new FormGroup({
-      email: new FormControl(null, [Validators.required, this.validatorEmail, this.validatorGenericDomain(this.domainsAllowed) /* this.validatorEmailCompany */]),
-      password: new FormControl(null, [Validators.required, /* Validators.pattern(/^[a-zA-Z0-9]{4,}$/), */ this.validatorPassword]),
-      //confirmPassword: new FormControl(null, [Validators.required, this.validatorPassword])
-    }, [/* this.validatorMatchPasswords */]);
+      email: new FormControl(null, [Validators.required, this.validatorEmail, this.validatorGenericDomain(this.domainsAllowed)]),
+      password: new FormControl(null, [Validators.required, this.validatorPassword]),
+    });
   }
 
   save() {
-    const message = this.fg.valid ? "Form is valid" : "Form is invalid"
-    //alert(message)
-    console.log(this.fg)
-    console.log(this.fg.value)
-    console.log(this.fg.getRawValue())
-    //console.log(this.fg.controls)
-    const summary = Object.values(this.fg.controls).map(control => control.errors ? Object.values(control.errors) : []).flat()
-    console.log(summary)
+    const { email, password } = this.fg.value;
 
+    const token = this.authService.login(email, password);
+
+    if (!token) {
+      this.fg.reset();
+      this.utilsService.showAlert("Invalid email or password");
+      return;
+    }
+
+    sessionStorage.setItem("token", token);
     this.router.navigate(["/dashboard"])
   }
 
@@ -81,7 +87,6 @@ export class Login {
     if (!ctrlPassword.value || !ctrlConfirmPassword.value) return null
 
     if (ctrlPassword.value !== ctrlConfirmPassword.value) {
-      //ctrlConfirmPassword.setErrors({ passwordMismatch: "Passwords do not match" })
       return { passwordMismatch: "Passwords do not match" }
     }
 
